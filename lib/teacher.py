@@ -5,7 +5,7 @@ from user import User
 import random
 
 class Teacher(User):
-    #super() function to call the constructor (test says positional arguments) of the base class.
+
     def __init__(self, first_name, last_name, knowledge = [
     "str is a data type in Python",
     "programming is hard, but it's worth it",
@@ -23,14 +23,7 @@ class Teacher(User):
        return self.knowledge[random.randint(1, 8)]
     
     
-    #here are alternatives. 
+    #alternative with random.choice
     # def teach(self):
     #    random_knowledge = random.choice(self.knowledge)
     #    return random_knowledge
-
-    # def teach(self):
-        # random_index = random.randint(0, len(self.knowledge) - 1)
-        # random_knowledge = self.knowledge[random_index]
-        # return random_knowledge
-
-
